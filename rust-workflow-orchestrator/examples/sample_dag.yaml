@@ -1,0 +1,9 @@
+name: Sample DAG
+schedule: "0 * * * *"  # Every hour
+tasks:
+  - id: task1
+    command: "echo 'Task 1'"
+    dependencies: []
+  - id: task2
+    command: "echo 'Task 2'"
+    dependencies: [task1]
